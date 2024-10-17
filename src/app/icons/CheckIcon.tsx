@@ -1,6 +1,6 @@
 import React from "react";
 
-function CheckIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
+export default function CheckIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -12,5 +12,3 @@ function CheckIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGE
         </svg>
     );
 }
-
-export default CheckIcon;

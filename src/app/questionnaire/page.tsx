@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Button from '../components/sections/basics/Button';
+import Alert from '../components/sections/basics/Alert';
 import CheckIcon from '../icons/CheckIcon';
 import WarningIcon from '../icons/WarningIcon';
 
@@ -34,13 +35,13 @@ const quizData = {
     ]
 };
 
+const negativeResult = "Unfortunately, we are unable to prescribe this medication for you. <br/> This is because finasteride can alter the PSA levels, which may be used to monitor for cancer. <br/> You should discuss this further with your GP or specialist if you would still like this medication.";
+const positiveResult = "Great news! <br> We have the perfect treatment for your hair loss. <br/ >Proceed to <a href=https://www.manual.co target=_blank> www.manual.co</a>, and prepare to say hello to your new hair!";
+
 export default function Questionnaire() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [userAnswers, setUserAnswers] = useState<number[]>([]);
     const [result, setResult] = useState('');
-
-    const negativeResult = "Unfortunately, we are unable to prescribe this medication for you. This is because finasteride can alter the PSA levels, which may be used to monitor for cancer. You should discuss this further with your GP or specialist if you would still like this medication.";
-    const positiveResult = "Great news! We have the perfect treatment for your hair loss. Proceed to www.manual.co, and prepare to say hello to your new hair!";
 
     const loadQuestion = () => {
         const currentQuestion = quizData.questions[currentQuestionIndex];
@@ -77,24 +78,21 @@ export default function Questionnaire() {
     const currentQuestion = loadQuestion();
 
     return (
-        <div className="flex items-center justify-center overflow-auto bg-[#E8EFE9] text-[#0B3B3C] h-screen">
+        <div className="flex items-center justify-center overflow-auto h-screen">
             {result ? (
-                <div>
-                    <div className='flex justify-center'>
-                        {result === positiveResult ? (
-                            <CheckIcon className='w-20 h-20 text-[#0B3B3C]' />
-                        ) : <WarningIcon className='w-20 h-20 text-[#7E0707]' />}
-                    </div>
-                    <h1 className="mt-2 text-2xl font-bold text-center">{result}</h1>
-                </div>
+                <Alert
+                    message={result}
+                    type={result === positiveResult ? "success" : "warning"}
+                    icon={result === positiveResult ? <CheckIcon className='w-10 h-10 mr-2' /> : <WarningIcon className='w-10 h-10 mr-2' />}
+                />
             ) : (
-                <div className="w-full max-w-md flex flex-col">
-                    <h2 className="text-xl font-bold mb-4 text-center">{currentQuestion.question}</h2>
-                    <div className="flex-1 overflow-y-auto max-h-[600px] mb-4">
+                <div className="w-full max-w-md flex flex-col p-4 sm:p-6 lg:p-8 text-[#0B3B3C]">
+                    <h2 className="mt-2 font-bold mb-4 text-center sm:text-md lg:text-xl">{currentQuestion.question}</h2>
+                    <div className="overflow-y-auto max-h-[600px] mb-4">
                         {currentQuestion.options.map((option, index) => (
                             <div
                                 key={`${index}-${option.value}`}
-                                className={`option flex justify-center mb-2 p-4 border rounded cursor-pointer bg-[#FFF] ${userAnswers[currentQuestionIndex] === index ? 'border-[#0B3B3C]' : 'border-gray-300'}`}
+                                className={`option flex justify-center mb-2 p-4 border rounded uppercase cursor-pointer bg-[#FFF] ${userAnswers[currentQuestionIndex] === index ? 'border-[#0B3B3C]' : 'border-gray-300'}`}
                                 onClick={() => handleOptionClick(index)}
                                 dangerouslySetInnerHTML={{ __html: option.display }}
                             />

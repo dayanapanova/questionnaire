@@ -1,6 +1,6 @@
 import React from "react";
 
-function WarningIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
+export default function WarningIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -12,5 +12,3 @@ function WarningIcon(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSV
         </svg>
     );
 }
-
-export default WarningIcon;
