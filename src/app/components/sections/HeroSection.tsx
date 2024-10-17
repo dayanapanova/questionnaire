@@ -1,8 +1,12 @@
+"use client";
 import Image from "next/image";
 import HeroImg from "../../assets/hero.jpeg";
 import ManualIcon from "../../icons/Manualcon";
+import { useRouter } from 'next/navigation';
+import Button from "./basics/Button";
 
 export default function HeroSection() {
+    const router = useRouter();
     return (
         <section className="relative bg-white">
             <div className="absolute inset-0 z-0 hidden lg:block">
@@ -34,13 +38,7 @@ export default function HeroSection() {
                     <p className="max-w-2xl mb-6 font-light text-[#0B3B3C] lg:mb-8 md:text-lg lg:text-xl">
                         We’re working around the clock to bring you a holistic <br /> approach to your wellness. From top to bottom, inside and <br /> out.
                     </p>
-
-                    <button
-                        className="items-center justify-center px-5 py-3 text-center text-[#FFF] bg-[#7E0707] uppercase"
-                    >
-                        Take the quiz
-                    </button>
-
+                    <Button text="Take the quiz" onClick={() => router.push("/questionnaire")} />
                 </div>
             </div>
         </section>
