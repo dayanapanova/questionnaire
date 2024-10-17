@@ -7,12 +7,13 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+    fontFamily: {
+      'body': ['"TT Norm"'],
     },
+    textColor: {
+      'body': "#0B3B3C"
+    }
+
   },
   plugins: [],
 };
