@@ -5,7 +5,7 @@ import ManualIcon from "../../icons/Manualcon";
 
 export default function FooterSection() {
     return (
-        <footer className="bg-[#E8EFE9] text-[#0B3B3C]">
+        <footer className="">
             <div className="mx-auto w-full max-w-screen-xl">
                 <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 lg:grid-cols-5">
                     <ManualIcon className="w-[75px] h-[75px] hidden lg:block" />
@@ -56,13 +56,13 @@ export default function FooterSection() {
                         <p className="mb-6 text-sm uppercase font-bold">Follow us</p>
                         <ul className="font-normal text-lg inline-flex gap-2">
                             <li>
-                                <FacebookIcon className="w-[20px] h-[20px] text-[#7E0707] cursor-pointer" />
+                                <FacebookIcon className="w-[20px] h-[20px] cursor-pointer" />
                             </li>
                             <li>
-                                <GoogleIcon className="w-[20px] h-[20px] text-[#7E0707] cursor-pointer" />
+                                <GoogleIcon className="w-[20px] h-[20px] cursor-pointer" />
                             </li>
                             <li>
-                                <TwitterIcon className="w-[20px] h-[20px] text-[#7E0707] cursor-pointer" />
+                                <TwitterIcon className="w-[20px] h-[20px] cursor-pointer" />
                             </li>
                         </ul>
                     </div>
@@ -71,7 +71,7 @@ export default function FooterSection() {
                     <ManualIcon className="w-10 h-10" />
                 </div>
                 <div className="px-4 py-6 flex justify-center">
-                    <span className="text-sm sm:text-center text-[#6D8A83] font-normal">© 2021 Manual. All Rights Reserved.
+                    <span className="text-sm sm:text-center font-normal">© 2021 Manual. All Rights Reserved.
                     </span>
                 </div>
             </div>

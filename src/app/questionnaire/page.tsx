@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
-import Button from '../components/sections/basics/Button';
-import Alert from '../components/sections/basics/Alert';
+import Button from '../components/basics/Button';
+import Alert from '../components/basics/Alert';
 import CheckIcon from '../icons/CheckIcon';
 import WarningIcon from '../icons/WarningIcon';
 
@@ -86,7 +86,7 @@ export default function Questionnaire() {
                     icon={result === positiveResult ? <CheckIcon className='w-10 h-10 mr-2' /> : <WarningIcon className='w-10 h-10 mr-2' />}
                 />
             ) : (
-                <div className="w-full max-w-md flex flex-col p-4 sm:p-6 lg:p-8 text-[#0B3B3C]">
+                <div className="w-full max-w-md flex flex-col p-4 sm:p-6 lg:p-8">
                     <h2 className="mt-2 font-bold mb-4 text-center sm:text-md lg:text-xl">{currentQuestion.question}</h2>
                     <div className="overflow-y-auto max-h-[600px] mb-4">
                         {currentQuestion.options.map((option, index) => (
