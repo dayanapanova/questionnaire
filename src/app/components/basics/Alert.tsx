@@ -6,13 +6,12 @@ interface Props {
 
 export default function Alert({ message, icon, type }: Props) {
     return (
-        <div className={`flex items-center p-4 mb-4 text-sm rounded-lg ${type === "warning" ? "bg-red-50" : "bg-green-50"}`}>
+        <div className={`flex items-center p-4 mb-4 text-sm rounded-lg ${type === "warning" ? "bg-red" : "bg-light-green"}`}>
             {icon}
             <div
                 dangerouslySetInnerHTML={{ __html: message }}
-                className={type === "warning" ? "text-red-800" : "text-green-800"}
-            >
-            </div>
+                className={type === "warning" ? "text-[#FFF]" : "text-dark-green"}
+            />
         </div>
     )
 }

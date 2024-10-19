@@ -78,7 +78,7 @@ export default function Questionnaire() {
     const currentQuestion = loadQuestion();
 
     return (
-        <div className="flex items-center justify-center overflow-auto h-screen">
+        <div className="flex items-center justify-center overflow-auto h-screen bg-footer-green">
             {result ? (
                 <Alert
                     message={result}
@@ -87,12 +87,12 @@ export default function Questionnaire() {
                 />
             ) : (
                 <div className="w-full max-w-md flex flex-col p-4 sm:p-6 lg:p-8">
-                    <h2 className="mt-2 font-bold mb-4 text-center sm:text-md lg:text-xl">{currentQuestion.question}</h2>
+                    <h4 className="mt-2 mb-4 text-center text-heading-4 text-dark-green">{currentQuestion.question}</h4>
                     <div className="overflow-y-auto max-h-[600px] mb-4">
                         {currentQuestion.options.map((option, index) => (
                             <div
                                 key={`${index}-${option.value}`}
-                                className={`option flex justify-center mb-2 p-4 border rounded uppercase cursor-pointer bg-[#FFF] ${userAnswers[currentQuestionIndex] === index ? 'border-[#0B3B3C]' : 'border-gray-300'}`}
+                                className={`option flex justify-center mb-2 p-4 border rounded uppercase cursor-pointer bg-[#FFF] ${userAnswers[currentQuestionIndex] === index ? 'border-2 border-dark-green' : 'border-1 border-[#CCC]'}`}
                                 onClick={() => handleOptionClick(index)}
                                 dangerouslySetInnerHTML={{ __html: option.display }}
                             />
