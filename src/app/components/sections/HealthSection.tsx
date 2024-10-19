@@ -18,7 +18,7 @@ export default function HealthSection() {
                     <h4 className="text-heading-4 text-dark-green mb-6">
                         Erections can be a tricky <br /> thing. But no need to feel <br /> down!
                     </h4>
-                    <p className="mt-4 font-normal text-xl">
+                    <p className="text-body-3 text-dark-green">
                         We’re working around the clock to bring you a holistic approach to your wellness. From top to bottom, inside and out.
                     </p>
                 </div>
@@ -27,7 +27,7 @@ export default function HealthSection() {
                     <h4 className="text-heading-4 text-dark-green mb-6">
                         Hair loss needn’t be <br /> irreversible. We can help!
                     </h4>
-                    <p className="text-body-3">
+                    <p className="text-body-3 text-dark-green">
                         We’re working around the clock to bring you a <br /> holistic approach to your wellness. From top to <br /> bottom, inside and out.
                     </p>
                 </div>

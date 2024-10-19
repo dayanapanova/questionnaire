@@ -5,15 +5,15 @@ import ManualIcon from "../../icons/Manualcon";
 
 export default function FooterSection() {
     return (
-        <footer className="">
+        <footer className="bg-footer-green">
             <div className="mx-auto w-full max-w-screen-xl">
                 <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 lg:grid-cols-5">
                     <ManualIcon className="w-[75px] h-[75px] hidden lg:block" />
-                    <div className="flex flex-col items-center">
-                        <p className="mb-6 text-sm uppercase font-bold">Product</p>
-                        <ul className="font-normal text-lg">
+                    <div className="text-dark-green flex flex-col items-center">
+                        <h6 className="mb-6 text-heading-7 uppercase">Product</h6>
+                        <ul>
                             <li className="mb-6">
-                                <a href="#" className=" hover:underline">Popular</a>
+                                <a href="#" className="hover:underline">Popular</a>
                             </li>
                             <li className="mb-6">
                                 <a href="#" className="hover:underline">Trending</a>
@@ -26,9 +26,9 @@ export default function FooterSection() {
                             </li>
                         </ul>
                     </div>
-                    <div className="flex flex-col items-center">
-                        <p className="mb-6 text-sm uppercase font-bold">Company</p>
-                        <ul className="font-normal text-lg">
+                    <div className="text-dark-green flex flex-col items-center">
+                        <h6 className="mb-6 text-heading-7 uppercase">Company</h6>
+                        <ul>
                             <li className="mb-6">
                                 <a href="#" className="hover:underline">Press</a>
                             </li>
@@ -43,26 +43,26 @@ export default function FooterSection() {
                             </li>
                         </ul>
                     </div>
-                    <div className="flex flex-col items-center">
-                        <p className="mb-6 text-sm uppercase font-bold">Info</p>
-                        <ul className="font-normal text-lg">
+                    <div className="text-dark-green flex flex-col items-center">
+                        <h6 className="mb-6 text-heading-7 uppercase">Info</h6>
+                        <ul>
                             <li className="mb-6">
                                 <a href="#" className="hover:underline">Support</a>
                             </li>
 
                         </ul>
                     </div>
-                    <div className="flex flex-col items-center">
-                        <p className="mb-6 text-sm uppercase font-bold">Follow us</p>
-                        <ul className="font-normal text-lg inline-flex gap-2">
+                    <div className="text-dark-green flex flex-col items-center">
+                        <h6 className="mb-6 text-heading-7 uppercase">Follow us</h6>
+                        <ul className="inline-flex gap-2">
                             <li>
-                                <FacebookIcon className="w-[20px] h-[20px] cursor-pointer" />
+                                <FacebookIcon className="w-[20px] h-[20px] cursor-pointer text-red" />
                             </li>
                             <li>
-                                <GoogleIcon className="w-[20px] h-[20px] cursor-pointer" />
+                                <GoogleIcon className="w-[20px] h-[20px] cursor-pointer text-red" />
                             </li>
                             <li>
-                                <TwitterIcon className="w-[20px] h-[20px] cursor-pointer" />
+                                <TwitterIcon className="w-[20px] h-[20px] cursor-pointer text-red" />
                             </li>
                         </ul>
                     </div>
@@ -71,8 +71,8 @@ export default function FooterSection() {
                     <ManualIcon className="w-10 h-10" />
                 </div>
                 <div className="px-4 py-6 flex justify-center">
-                    <span className="text-sm sm:text-center font-normal">© 2021 Manual. All Rights Reserved.
-                    </span>
+                    <p className="text-body-4 text-light-green">© 2021 Manual. All Rights Reserved.
+                    </p>
                 </div>
             </div>
         </footer>
