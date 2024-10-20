@@ -18,8 +18,8 @@ export default function HeroSection() {
 
             <div className="xs:block justify-center text-center items-center lg:absolute lg:text-justify lg:items-start top-10 left-0 flex flex-col px-20 py-10">
                 <ManualIcon className="w-[40px] h-[40px] mb-20" />
-                <h1 className="text-heading-1 text-dark-green">
-                    Be good <br />to yourself
+                <h1 className="text-heading-3 md:text-heading-1 text-dark-green">
+                    Be good <br /> to yourself
                 </h1>
                 <p className="mt-6 mb-8 text-body-3 text-dark-green">
                     We’re working around the clock to bring you a holistic <br /> approach to your wellness. From top to bottom, inside and <br /> out.
