@@ -77,6 +77,8 @@ export default function Questionnaire() {
 
     const currentQuestion = loadQuestion();
 
+    const isOptionSelected = userAnswers[currentQuestionIndex] !== undefined;
+
     return (
         <div className="flex items-center justify-center overflow-auto h-screen bg-footer-green">
             {result ? (
@@ -100,7 +102,7 @@ export default function Questionnaire() {
                     </div>
                     <div className="flex justify-between mt-3 mb-3">
                         <Button text="Back" onClick={handleBack} disabled={currentQuestionIndex === 0} />
-                        <Button text="Next" onClick={handleNext} />
+                        <Button text="Next" onClick={handleNext} disabled={!isOptionSelected} />
                     </div>
                 </div>
             )}
