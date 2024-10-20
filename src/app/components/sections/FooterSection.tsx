@@ -18,7 +18,7 @@ const LinkList = ({ title, links }: LinkListProps) => (
         <h6 className="mb-6 text-heading-7 uppercase">{title}</h6>
         <ul>
             {links.map((link, index: number) => (
-                <li className="mb-6" key={index}>
+                <li className="mb-6" key={`${index}-${link.label}`}>
                     <a href={link.href} className="hover:underline">{link.label}</a>
                 </li>
             ))}
