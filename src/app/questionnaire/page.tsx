@@ -83,10 +83,10 @@ export default function Questionnaire() {
                 <Alert
                     message={result}
                     type={result === positiveResult ? "success" : "warning"}
-                    icon={result === positiveResult ? <CheckIcon className='w-10 h-10 mr-2' /> : <WarningIcon className='w-10 h-10 mr-2' />}
+                    icon={result === positiveResult ? <CheckIcon className='w-10 h-10 mr-2 text-dark-green' /> : <WarningIcon className='w-10 h-10 mr-2 text-dark-blue' />}
                 />
             ) : (
-                <div className="w-full max-w-md flex flex-col p-4 sm:p-6 lg:p-8">
+                <div className="w-full h-full max-w-md flex flex-col p-4 sm:p-6 lg:p-8">
                     <h4 className="mt-2 mb-4 text-center text-heading-4 text-dark-green">{currentQuestion.question}</h4>
                     <div className="overflow-y-auto max-h-[600px] mb-4">
                         {currentQuestion.options.map((option, index) => (

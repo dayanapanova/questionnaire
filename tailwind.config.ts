@@ -15,6 +15,8 @@ const config: Config = {
       'light-green': '#6D8A83',
       'footer-green': '#E8EFE9',
       'red': '#7E0707',
+      'dark-blue': '#1E429F',
+      'light-blue': '#EBF5FF'
     },
     fontSize: {
       'body-4': ['16px', { lineHeight: '30px', fontWeight: '400' }],
